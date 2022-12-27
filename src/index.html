@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main class="main">
+    <div class="container">
+
+      <div class="rating-component component">
+        <div class="icon-star-circle circle">
+          <img class="icon-star-svg" src="./images/icon-star.svg" alt="star icon">
+        </div>
+        <h1 class="question heading">How did we do?</h1>
+        <p class="rating-info info">Please let us know how we did with your support request. All feedback is
+          appreciated
+          to help us improve our offering!</p>
+        <ul class="rating-number-list">
+          <li><a id="rate-1" class="rate-number-circle circle" href="#" onclick="clickRateNumber(this)">1</a></li>
+          <li><a id="rate-2" class="rate-number-circle circle" href="#" onclick="clickRateNumber(this)">2</a></li>
+          <li><a id="rate-3" class="rate-number-circle circle" href="#" onclick="clickRateNumber(this)">3</a></li>
+          <li><a id="rate-4" class="rate-number-circle circle" href="#" onclick="clickRateNumber(this)">4</a></li>
+          <li><a id="rate-5" class="rate-number-circle circle" href="#" onclick="clickRateNumber(this)">5</a></li>
+        </ul>
+        <p id="select-msg" style="display: none; color: red;"><strong>Rate number is not selected!</strong></p>
+        <button class="submit-btn" onclick="submitFeedback()">Submit</button>
+      </div>
+
+      <div class="thankyou-component component" style="display: none;">
+        <img class="illustration" src="./images/illustration-thank-you.svg" alt="star icon">
+        <p class="you-selected">You selected <span id="rating">#</span> out of 5</p>
+        <h1 class="thank-you heading">Thank you!</h1>
+        <p class="we-appreciate info">We appreciate you taking the time to give a rating. If you ever need more
+          support,
+          don't hesitate to get in touch!</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
